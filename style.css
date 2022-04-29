@@ -67,7 +67,7 @@ h1 {
     background-color: darkgrey;
     opacity: 0.5;
 }
-.todo-item.delition {
+.todo-item.deletion {
  animation: opacity ls ease-in-out;   
 }
 
