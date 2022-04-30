@@ -17,5 +17,10 @@ Masyvui tasks priskiriame metodą push, metodas push siunčia i masyvo galą obj
 Kurdami naują objektą su funkcija new Task
 Perduodame jai pradžioje sukurto kintamojo mazgą , inputo'description-task' su numatyta verte value
 
+4. Veiksmas
+tasks masyvą siūsiu į Local Storage ir paskui iš ten imsime reikiamus objektus
+Kiek aukščiau pateiksime funkciją, kuri mums būs reikalinga ir kituose dalyse.
 
-
+Kreipiames i globaline mums prieinamą localStorage,  su metodu setItem kuriuo(viduje) perduodame dvi prasmes (key: string, value: string) key- pervadinsime į mūsu uždavinį('tasks'), (antrają reikšmę reiktu paduoti JSON formatu. Todėl masyvą tasks  turime perfarmatuoti į JSON ir tik tada nusiūsti į  Local Storage
+updateLocal iššaukiam būten tada kai suveikia tasks.push
+Patikriname serveryje(Application =>Local Storage
