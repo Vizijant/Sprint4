@@ -18,7 +18,7 @@ const createTemplate = (task, index) =>{
     <div class="description">${task.description}</div>
     <div class="buttons">
         <input onclick="completeTask(${index})" class="btn-complete" type="checkbox" ${task.completed ? 'checked' : ''}>
-        <button class="btn-delete" >Delete</button>
+        <button onclick="deleteTask(${index})" class="btn-delete" >Delete</button>
     </div>
 </div>
 `
@@ -58,3 +58,8 @@ addTaskBtn.addEventListener('click', () => {
     fillHtmlList();
     deskTaskInput.value = '';
 }) 
+const deleteTask = index => {
+  tasks.splice(index, 1); 
+  updateLocal();
+  fillHtmlList(); 
+}

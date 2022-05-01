@@ -27,7 +27,7 @@ updateLocal iššaukiam būten tada kai suveikia tasks.push
 Patikriname serveryje(Application =>Local Storage
 https://github.com/Vizijant/Sprint4/blob/main/img/Fiksavimas.PNG
 
-5. Veiksmas(Local Storage masyvo užpildymas )
+5. Local Storage Array Fill
 Kreipiuosi į Local Storage ir tikrinu ar pas mane yra kas Local Storage kad reikšmes siūsti į lokalų masyvą o jei nieko ten nerasime tai task  bus tuščas, ir tada mes užpildisime jį, o iš jo pildysis masyvas- Local Storage. Suksim ratu.
 let tasks;      !localStorage.tasks ? tasks = [] : tasks = JSON.parse(localStorage.getItem('tasks'));
 
@@ -42,3 +42,8 @@ Kad įgalinti  migtuką "btn-complete" (jį nuspaudus, ekranas išduotu užduoti
 2) Iššaukti funkciją complete.Task priimant reikšmę index, Po ko kreipsiuos į masyvą, kad pakeisti reikšmes, ir kreipsiuos localStorage, kad localStorage per "updateLocal" funkciją atnaujintu reikšmes orientuodamasis į masyvą "tasks".
 
 
+8. Deleting tasks
+
+Kad  ištrinti užduotis masyve, o duomenys  atsinaujintu localStorage, kreipiuosi į tasks ir su metodu 
+Splice trinsiu vieną pasirinktą index, po ko iššauksiu () kad atnaujintu localStorage, tada  su () fillHtmlList
+ pasiektiu galutinį tikslą -  paspaudus delete migtuką, užduotis ekrane pradingsta.
