@@ -23,4 +23,22 @@ Kiek aukščiau pateiksime funkciją, kuri mums būs reikalinga ir kituose dalys
 
 Kreipiames i globaline mums prieinamą localStorage,  su metodu setItem kuriuo(viduje) perduodame dvi prasmes (key: string, value: string) key- pervadinsime į mūsu uždavinį('tasks'), (antrają reikšmę reiktu paduoti JSON formatu. Todėl masyvą tasks  turime perfarmatuoti į JSON ir tik tada nusiūsti į  Local Storage
 updateLocal iššaukiam būten tada kai suveikia tasks.push
+
 Patikriname serveryje(Application =>Local Storage
+https://github.com/Vizijant/Sprint4/blob/main/img/Fiksavimas.PNG
+
+5. Veiksmas(Local Storage masyvo užpildymas )
+Kreipiuosi į Local Storage ir tikrinu ar pas mane yra kas Local Storage kad reikšmes siūsti į lokalų masyvą o jei nieko ten nerasime tai task  bus tuščas, ir tada mes užpildisime jį, o iš jo pildysis masyvas- Local Storage. Suksim ratu.
+let tasks;      !localStorage.tasks ? tasks = [] : tasks = JSON.parse(localStorage.getItem('tasks'));
+
+6. Added features to make  "tasks" appear on the page
+
+Jeigu local Storage yra reikšmių "!localStorage.tasks" tada jos  siunčiamos į tasks. Per funkcija  "fillHtmlList()" kreipiames į tasks, tada metodas "forEach()" vieną kartą vykdo pateiktą funkciją kiekvienam masyvo elementui.  Tada, per sukurtą funkcija, "createTemplate(item, index) "formuojasi šablonas, kuris siunčiamas į "todos-wrapper", kad pasiektu galutinį tikslą -pasirodytu ekrane.
+
+7. Added task tagging features
+
+Kad įgalinti  migtuką "btn-complete" (jį nuspaudus, ekranas išduotu užduoties "task"  įvykdymo faktą). 
+1) Kreipsiuos į masyvą "tasks", kad surasti tą elementą , kuris buvo paveiktas paspaudimu, 
+2) Iššaukti funkciją complete.Task priimant reikšmę index, Po ko kreipsiuos į masyvą, kad pakeisti reikšmes, ir kreipsiuos localStorage, kad localStorage per "updateLocal" funkciją atnaujintu reikšmes orientuodamasis į masyvą "tasks".
+
+
